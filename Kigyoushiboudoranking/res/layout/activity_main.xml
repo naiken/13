@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/android:list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/list_selector"
+                android:choiceMode="singleChoice"
+                android:divider="#00ffffff"
+                android:dividerHeight="3sp" >
+            </ListView>
+        </LinearLayout>
+
+        <jp.co.cayto.appc.sdk.android.AppCMoveIconView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            appc_skin_color="#88FF0000"
+            appc_text_color="magenta" />
+    </LinearLayout>
+
+</FrameLayout>

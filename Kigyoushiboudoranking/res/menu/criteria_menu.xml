@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+    
+    <item
+        android:id="@+id/menu_settings_criteria"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:showAsAction="ifRoom"
+        android:title="調整"/>
+    
+    <item
+        android:id="@+id/criteria_actionbutton_delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:showAsAction="ifRoom"
+        android:title="判断基準を削除"/>
+
+</menu>

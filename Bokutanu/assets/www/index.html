@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>Plain Project Skeleton</title>
+    <style>
+        html,body{
+            margin :0;
+            height :100%;
+            background:#000;
+            }
+        body {
+        background : url("./img/background.png");
+         background-repeat : no-repeat;
+            background-position : center;
+            -webkit-background-size : 320px;
+            -moz-background-size: cover;
+            background-size: 320px;
+        }
+
+        div#page {
+            /*margin-bottom: 5px;*/
+            padding-bottom : 50px;
+        }
+        .nend_wrapper {
+            background-color : "black";
+            position: fixed; /* 固定 */
+            bottom: 0; /* 一番下に表示 */
+            width: 100%; /* 中央に表示 */
+        }
+
+         #Librarybutton {
+            background : url("./img/book02.png") 40% 40% no-repeat;
+            position: absolute;
+            width : 127;
+            height : 98;
+            bottom:70%;
+            left:70%;
+        }
+        * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+        #enchant-stage {
+            position: absolute !important;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    document.addEventListener('touchmove', function(ev) {
+        ev.preventDefault();
+    }, false);
+</script>
+<div id="enchant-stage" style="width:320px;height:480px;"></div>
+<div class="nend_wrapper">
+    <script src="http://js1.nend.net/js/nendAdLoader.js"></script>
+</div>
+
+<script type="text/javascript" src="./js/enchant.js"></script>
+<script type="text/javascript" src="./js/mainScene.js"></script>
+<script type="text/javascript">
+    var nend_params = {"media":7071,"site":48626,"spot":99640,"type":1,"oriented":2};
+</script>
+</body>
+</html>

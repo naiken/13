@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+    
+    <item
+        android:id="@+id/commpany_actionbutton_add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="ifRoom"
+        android:title="判断基準を追加"/>
+    <item
+        android:id="@+id/commpany_actionbutton_delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:showAsAction="ifRoom"
+        android:title="企業削除"/>
+</menu>

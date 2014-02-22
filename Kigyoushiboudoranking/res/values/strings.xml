@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">企業志望度ランキング</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="input_new_commpany">新規登録：企業名を入力してください</string>
+    <string name="input_new_criteria">新規登録：判断基準を入力してください</string>
+     <string name="confirmation">確認</string>
+    <string name="input_criteria_weight">重要度を入力してください</string>
+    <string name="activity_animation_duration">300</string>
+    
+</resources>

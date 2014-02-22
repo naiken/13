@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.co.marugen.marupeke"
+    android:versionCode="3"
+    android:versionName="2.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <!-- AppC Core Setting Start -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- AppC Core Setting End -->
+
+    <!-- AppC Gamers Setting Start -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- AppC Gamers Setting End -->
+
+    <!-- AppC Purchase Setting Start -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <!-- AppC Purchase Setting End -->
+
+    <!-- AppC Push Setting Start -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="jp.co.marugen.marupeke.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission
+        android:name="jp.co.marugen.marupeke.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- AppC Push Setting End -->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="jp.co.marugen.marupeke.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+                <activity
+            android:name="GameActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="jp.co.marugen.marupeke.EndActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- AppC Core Setting Start -->
+        <meta-data
+            android:name="appc_media_key"
+            android:value="1a0ac5df9bfd3e8a139471dd3701207ad5344c1a"/>
+
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCAdCutinActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCRecoveryActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCAgreementActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- AppC Core Setting End -->
+
+        <!-- AppC Gamers Setting Start -->
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCGamersActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- AppC Gamers Setting End -->
+
+        <!-- AppC Purchase Setting Start -->
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCPurchaseActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- AppC Purchase Setting End -->
+
+        <!-- AppC Reward Setting Start -->
+        <activity
+            android:name="net.app_c.cloud.sdk.AppCRewardActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- AppC Reward Setting End -->
+
+        <!-- AppC Core Setting Start -->
+        <!-- warningが��Eますが android:exportedの記述はしなぁE��ください -->
+        <receiver android:name="net.app_c.cloud.sdk.AppCIDReceiver" >
+            <intent-filter>
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.search" />
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.set" />
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.remove" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.app_c.cloud.sdk.AppCPkgReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootStrap" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" >
+                </data>
+            </intent-filter>
+        </receiver>
+        <!-- AppC Core Setting End -->
+
+
+        <!-- AppC Push Setting Start -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="jp.co.marugen.marupeke" />
+            </intent-filter>
+        </receiver>
+        <service android:name="net.app_c.cloud.sdk.AppCPushService" />
+        <!-- AppC Push Setting End -->
+
+    </application>
+
+</manifest>
