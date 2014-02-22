@@ -1,0 +1,23 @@
+{
+    "plugins": {
+        "monaca.js": [
+
+        ],
+        "phonegap\/cordova.js": [
+
+        ],
+        "monaca.viewport.js": [
+
+        ]
+    },
+    "splash": {
+        "android": {
+            "background": "#FFFFC0",
+            "autoHide": true
+        }
+    },
+    "version": "1.0",
+    "pushNotification": {
+        "pushProjectId": "SZIHfNfbbhmmTaTX"
+    }
+}

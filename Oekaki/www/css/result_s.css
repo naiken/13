@@ -1,0 +1,36 @@
+body{
+    background-color:#9fc7fd;
+    background-size : 100%;
+}
+#succeeded{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+    width:100%;
+}
+#irasuto{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+    width:93%;
+}
+#coms{
+	display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width:100%;
+    margin-top:10px;
+}
+#buttons{
+	position:fixed;
+	top:90%;
+	width:100%;
+	height:110px;
+	background-color:white;
+}
+.button_x{
+    float:left;
+    margin-left :4.5%;
+    margin-top: 5px;
+    margin-bottom : 5px;
+}

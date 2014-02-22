@@ -1,0 +1,50 @@
+body {
+    background-image:url("../image/background1.png");
+	background-repeat: no-repeat;
+    background-size:100%;
+}
+select{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border-radius:30px;
+    width: 70%;
+    height: 59px;
+    font-size: 23px;
+    font-weight: 900;
+    text-indent: 0.2em;
+    color: #ff036e;
+    background:#fdfa9a;
+    border: solid 3px black;
+    margin-top: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+button{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border-radius:30px;
+    width: 70%;
+    height: 59px;
+    font-weight: 900;
+    background:#fdfa9a;
+    font-size: 28px;
+    display:block;
+	border: solid 3px black;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+}
+#start{
+   color: #0380ff;
+}
+#home{
+   color: #4aff03;	
+}
+#ad{
+    margin-top:22px;
+    position:relative;
+    left:-8px;
+}

@@ -1,0 +1,93 @@
+body{
+    background-size:100%;
+	background-color: #9fc7fd;
+}
+li { 
+    list-style: none;
+    float: left;  
+    position:relative;
+    left:-5%;
+    width: 47%;
+    margin-left:3%; 
+}  
+label {  
+    display: block;  
+    padding: 10px 5px;  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #ddd), color-stop(0.5, #ccc), color-stop(1, #bbb));  
+    border: 1px solid #fff;  
+    border-radius: 14px 14px 14px 14px;  
+    -webkit-box-shadow: 0 0 5px #aaa;  
+    color: #333;
+    font-size:35px;  
+    font-weight: bold; 
+    height:70px; 
+    text-shadow: 0 1px #fff;  
+    text-align: center;  
+    color: #555;  
+} 
+input[type="radio"]:checked + label {  
+    text-shadow: 0 -1px #fff;  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(100,100,100,.3)), color-stop(1, rgba(255,255,255,0)));  
+    color: #111;  
+} 
+input[type="radio"] {  
+    opacity : 0;  
+    width: 100%;  
+    height: 100%;  
+    padding: 0;  
+}
+#progress{
+    float:left;
+    position:relative;
+    top:30px;
+    margin-left:7%;
+    width:370px;
+    height: 65px;
+}
+#wordArea{
+    border-radius: 30px 30px 30px 30px;  
+    padding: 15px 5px;  
+    background-color: white;
+    font-size:55px;
+    text-align:center;
+    width:65%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+#asnumber{
+    margin-left:72%;
+    padding-top:40px;
+    height:75px;
+}
+#sec{
+    margin-left: 5px;
+}
+#sec img{
+    display:block;
+    float:left;
+    overflow : hidden;
+}
+#end{
+    margin-left:47%;
+}
+#irasuto{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:65px;
+    height:420px;
+    width:86%;
+    border-radius: 80px 80px 80px 80px;  
+}
+#irasuto img{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.sec_next{
+    margin-left: 15.4%;
+}
+#ad{
+}

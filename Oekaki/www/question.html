@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="plugins/plugin-loader.css">
+    <link rel="stylesheet" href="./css/question.css">
+    <link rel="stylesheet" href="./css/jquery-ui-1.10.3.custom.min.css">
+    <script src="plugins/plugin-loader.js"></script>
+    <script>monaca.viewport({width : "640"});</script>
+    <script type='application/javascript' src='./js/fastclick.js'></script>
+    <script src="./js/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="./js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<audio id="s_sound" preload="auto">
+    <source src="./audio/s_sound2.mp3" type="audio/mp3">
+</audio>
+<audio id="f_sound" preload="auto">
+	<source src="./audio/f_sound2.mp3" type="audio/mp3">
+</audio>
+
+<div id="progress"></div>
+<div id="asnumber"></div>
+<div id="sec">
+	<img src="./image/start.png">
+	<img src="./image/end.png" id="end">
+</div>
+<div id="irasuto"></div>
+<div id="wordArea"></div>
+<div id="question"></div>
+<div id="ad">
+    <script type="text/javascript">
+        var nend_params = {"media":7071,"site":56169,"spot":120944,"type":1,"oriented":3};
+    </script>
+    <script type="text/javascript" src="http://js1.nend.net/js/nendAdLoader.js"></script>
+</div>
+<script src="./js/question.js" type="text/javascript"></script>
+</body>
+</html>
