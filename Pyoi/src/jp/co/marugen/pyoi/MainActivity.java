@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
 
+import jp.co.cayto.appc.sdk.android.AppC;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -28,6 +29,7 @@ import android.os.Environment;
 import android.provider.MediaStore.Images;
 import android.provider.MediaStore.Images.Media;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -56,12 +58,16 @@ public class MainActivity extends Activity {
     private Bitmap rightBitmap;
     private Canvas leftCanvas;
     private Canvas rightCanvas;
+    private AppC mAppC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
+        // appCのインスタンス化
+        mAppC = new AppC(this);
 
         imgBtnSmallLeft = (ImageButton) this.findViewById(R.id.imageButton6);
         imgBtnSmallLeft.setEnabled(false);
@@ -83,6 +89,7 @@ public class MainActivity extends Activity {
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
+                        // TODO 自動生成されたメソッド・スタブ
                         Log.d("AlertDialog", "Positive which :" + which);
                     }
                 });
@@ -258,6 +265,23 @@ public class MainActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // カットイン初期化
+        mAppC.initCutin();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            // カットイン終了了タイプ(アプリが終了了します)
+            mAppC.callCutinFinish();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     private void callGallery() {
         // ギャラリー呼び出し
         Intent intent = new Intent();
@@ -268,6 +292,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
         if (requestCode == REQUEST_GALLERY && resultCode == RESULT_OK) {
             try {
                 BitmapFactory.Options bitmapOption = new BitmapFactory.Options();
@@ -387,7 +412,6 @@ public class MainActivity extends Activity {
         return Environment.getExternalStorageDirectory().getPath() + "/MyApp/";
     }
 
-    @SuppressWarnings("deprecation")
     private String getFilePath(File dir, String name) {
         Date d = new Date();
 
@@ -448,5 +472,4 @@ public class MainActivity extends Activity {
         }
 
     }
-
 }
