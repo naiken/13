@@ -1,0 +1,44 @@
+!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ポイ捨てバッティング Hey,You!</title>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <script type="text/javascript" src="enchant.js"></script>
+    <script type="text/javascript" src="litter_batting.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background:#000;
+            position:relative;
+        }
+        #enchant-stage {
+            position:absolute;
+            top:-17px;
+/*            高さと幅を９割に変更*/
+            width:576px;
+            height:882px;
+/*
+            width:882px;
+            height:576px;
+*/
+/*            中央に配置*/
+            margin:0 auto;
+        }
+    </style>
+</head>
+<!--<body onLoad="changeSize()">-->
+    <body>
+    <div id="enchant-stage"></div>
+    <script>
+    function changeSize() {
+        $("#enchant-stage").css({
+            "width": 882 + "px", "height" : 576 + "px"
+        });
+    }
+    </script>
+</body>
+</html>
