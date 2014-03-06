@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="background">#bf000000</drawable>
+
+    <style name="Theme.Transparent" parent="android:style/Theme.Holo.Wallpaper">
+        <item name="android:windowBackground">@drawable/background</item>
+    </style>
+
+</resources>

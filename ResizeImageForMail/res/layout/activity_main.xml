@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:text="画像の倍率を設定しよう"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textScale"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:text="1.0倍"
+            android:textSize="20sp" />
+
+        <SeekBar
+            android:id="@+id/barScale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="10" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:text="Gmailに画像を添付する？"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:id="@+id/checkMail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="はい" />
+
+        <Button
+            android:id="@+id/btnDecide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="決定" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <jp.co.cayto.appc.sdk.android.AppCSimpleView
+        android:id="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        appc_skin_ccolor="#FF0000"
+        appc_text_color="magenta" />
+
+</FrameLayout>
